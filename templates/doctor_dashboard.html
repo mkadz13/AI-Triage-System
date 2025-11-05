@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block title %}Doctor Dashboard{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-md-12">
+        <h2>Patient Queue</h2>
+        <div class="patient-list">
+            {% for patient in patients %}
+            <div class="card mb-3 patient-card" data-patient-id="{{ patient.id }}">
+                <div class="card-body">
+                    <h5 class="card-title">{{ patient.name }} ({{ patient.age }})</h5>
+                    <p class="card-text">
+                        <small class="text-muted">Waiting since: {{ patient.created_at.strftime('%H:%M:%S') }}</small>
+                    </p>
+                    <div class="summary">
+                        {{ patient.summary | safe }}
+                    </div>
+                    <button class="btn btn-primary view-details">View Details</button>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+    const socket = io();
+    
+    socket.on('new_patient', (data) => {
+        // Refresh the dashboard when a new patient arrives
+        location.reload();
+    });
+
+    // Join the doctors room for broadcasts
+    socket.emit('join', {room: 'doctors'});
+</script>
+{% endblock %}
