@@ -135,10 +135,8 @@ const PatientChat = () => {
         </div>
       </header>
 
-      {/* Chat Container */}
       <main className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
         <div className="card h-[600px] flex flex-col">
-          {/* Messages Area */}
           <div className="flex-1 overflow-y-auto p-4 space-y-4">
             {messages.length === 0 && (
               <div className="text-center py-8">
@@ -180,7 +178,6 @@ const PatientChat = () => {
             <div ref={messagesEndRef} />
           </div>
 
-          {/* Input Area */}
           <div className="border-t border-gray-200 p-4">
             <form onSubmit={handleSubmit} className="flex space-x-3">
               <input
@@ -208,7 +205,6 @@ const PatientChat = () => {
           </div>
         </div>
 
-        {/* Help Text */}
         <div className="mt-6 text-center">
           <p className="text-sm text-gray-500">
             Be as detailed as possible when describing your symptoms. This helps our AI provide a more accurate assessment.

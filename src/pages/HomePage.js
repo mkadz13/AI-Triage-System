@@ -85,7 +85,6 @@ const HomePage = () => {
         </div>
       </header>
 
-      {/* Hero Section */}
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="text-center mb-16">
           <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
@@ -98,7 +97,6 @@ const HomePage = () => {
           </p>
         </div>
 
-        {/* Features Grid */}
         <div className="grid md:grid-cols-3 gap-8 mb-16">
           <div className="text-center">
             <div className="bg-primary-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -125,7 +123,6 @@ const HomePage = () => {
           </div>
         </div>
 
-        {/* Triage Form */}
         <div className="max-w-md mx-auto">
           <div className="card shadow-soft">
             <div className="text-center mb-6">
@@ -192,7 +189,6 @@ const HomePage = () => {
           </div>
         </div>
 
-        {/* Info Section */}
         <div className="mt-16 text-center">
           <p className="text-gray-500 text-sm">
             This system is designed to assist healthcare professionals and should not replace 

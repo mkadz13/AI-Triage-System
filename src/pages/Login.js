@@ -47,7 +47,6 @@ const Login = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-indigo-50 flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-md w-full space-y-8">
-        {/* Header */}
         <div className="text-center">
           <div className="mx-auto h-16 w-16 bg-primary-600 rounded-full flex items-center justify-center mb-4">
             <Stethoscope className="h-8 w-8 text-white" />
@@ -56,7 +55,6 @@ const Login = () => {
           <p className="text-gray-600">Access your medical triage dashboard</p>
         </div>
 
-        {/* Login Form */}
         <div className="card shadow-soft">
           <form onSubmit={handleSubmit} className="space-y-6">
             {error && (
@@ -132,7 +130,6 @@ const Login = () => {
           </form>
         </div>
 
-        {/* Demo Credentials */}
         <div className="text-center">
           <div className="bg-blue-50 border border-blue-200 rounded-lg p-4">
             <h3 className="text-sm font-medium text-blue-800 mb-2">Demo Credentials</h3>
@@ -145,7 +142,6 @@ const Login = () => {
           </div>
         </div>
 
-        {/* Back to Home */}
         <div className="text-center">
           <button
             onClick={() => navigate('/')}
